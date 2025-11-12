@@ -17,6 +17,10 @@ import networkx as nx
 import boto3
 import os
 
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.title="Grain movement by Sea"
+server = app.server
+
 # ---- Configuration ----
 access_ll = os.environ.get("ACCESS_LL") 
 ws_llave = os.environ.get("WS_LLAVE")
@@ -891,3 +895,4 @@ def open_modal_4(n, is_open, fig):
 # ----------------------------
 if __name__ == "__main__":
     app.run_server(debug=True)
+
