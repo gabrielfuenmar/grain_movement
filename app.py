@@ -59,10 +59,6 @@ week_vol_exp = pd.read_parquet(week_exp_path,
 
 ####------------------------------
 CATEGORY_OPTIONS = ['Developing', 'Developed', 'LDC', 'SIDS', 'Territories']
-
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app.title = "Grain and Agripods transported by sea"
-
 # ----------------------------
 # DF selection + period helpers
 # ----------------------------
@@ -896,4 +892,5 @@ def open_modal_4(n, is_open, fig):
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=8050, debug=False)
 # ---- Configuration ----
+
 
