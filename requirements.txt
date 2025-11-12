@@ -1,0 +1,22 @@
+# Core
+python-dotenv==1.0.1
+pandas==1.5.1
+numpy==1.26.4            # compatible with pandas 1.5.x & SciPy 1.11.x
+scipy==1.11.4
+
+# Dash app
+dash==2.18.1
+dash-bootstrap-components==1.6.0
+plotly==5.18.0
+gunicorn==23.0.0
+
+# Graphs / utils
+networkx==3.2.1
+
+# Parquet I/O
+pyarrow==14.0.0          # Parquet engine
+# S3 access via pandas.read_parquet(..., storage_options=...)
+fsspec==2023.10.0
+s3fs==2023.10.0
+
+boto3==1.28.57
