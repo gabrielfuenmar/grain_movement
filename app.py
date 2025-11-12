@@ -690,7 +690,7 @@ def update_charts(flow, freq, start_p, end_p, categories_selected, countries_sel
         fig2.update_xaxes(type="category", categoryorder="array", categoryarray=cats)
         fig2.update_layout(yaxis_title="Sum voy_intake_mt")
         
-        add_elnino_band(fig2, cats, "monthly" if freq == "monthly" else "weekly")
+    
 
 # --- FIGURE 3: Suez-only sum over time (Overall vs Selection) ---
     # Safe transit masks
@@ -748,6 +748,8 @@ def update_charts(flow, freq, start_p, end_p, categories_selected, countries_sel
 
     fig3.update_xaxes(type="category", categoryorder="array", categoryarray=cats3)
     fig3.update_layout(yaxis_title="Sum voy_intake_mt")
+    add_houthi_band(fig3, cats3, "monthly" if freq == "monthly" else "weekly")
+    
     # FIG 4: stacked area by country over period (active side)
     
     # --- FIGURE 4: Transit-only sum over time (Overall vs Selection) ---
@@ -892,5 +894,6 @@ def open_modal_4(n, is_open, fig):
 if __name__ == "__main__":
     app.run_server(host="0.0.0.0", port=8050, debug=False)
 # ---- Configuration ----
+
 
 
